@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIRO AL BLANCO</title>
+</head>
+<body>
+    <canvas width="600" height="4000">
+
+    </canvas>
+  <script>
+ 
+  var pantalla = document.querySelector("canvas");
+  var pincel=pantalla.getContext("2d");
+  
+
+  pincel.fillStyle="gray";
+  pincel.fillRect(0,0,600,400);
+
+ 
+
+  function DibujarCirculo(x,y,radio, color){
+  
+  pincel.fillStyle="red";
+  pincel.beginPath();
+  pincel.arc(x,y,radio,0,Math.PI);
+  pincel.fill();
+  console.log(x+","+y)
+
+
+  }
+
+  function LimpiarPantalla(){
+
+    pincel.clearRect(0,0,600,400)
+  }
+
+  var x=0;
+  
+ function ActualizarPantalla(){
+
+
+  LimpiarPantalla();
+ 
+  DibujarCirculo(x,10,20)
+  x++;
+ }
+DibujarCirculo(100,100,40,"red");
+DibujarCirculo(100,100,20,"whhite");
+DibujarCirculo(100,100,10,"red");
+
+</script>
+</body>
+</html>
