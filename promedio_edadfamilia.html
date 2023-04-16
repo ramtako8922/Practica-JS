@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Programa que muestra el promedio de edad familiar</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      
+      
+     
+      //Varriables
+    
+    var itegrantesFamilia=parseInt(prompt("Ingrese el numero de integrantes de suu familia"));
+    var totalEdades=0;
+    var contador=1;
+    
+    
+    //llamado a funciones
+   while(contador<=itegrantesFamilia )
+   {
+     var edad=parseInt(prompt("ingrese la edad de su familiar"));
+     totalEdades=totalEdades+edad;
+     contador++;
+    
+     
+     
+   }
+   var mediaEdades=totalEdades/itegrantesFamilia;
+
+   Imprimir("La edad promedio de su familia es "+mediaEdades);
+
+   Imprimir("Fin")
+    
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Dibula estrellas</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      function ObtenerNumeroAleatorio(n){
+        min=0;
+        max=Math.floor(n);
+
+        return Math.floor(Math.random()*(n-min+1)+min);
+      }
+
+      
+     
+      //Varriables
+   
+    
+    
+    //llamado a funciones
+    
+    for( var linea=1; linea<=3;linea++){
+
+        for( var estrellas=1; estrellas<=10; estrellas++){
+
+            document.write("*");
+        }
+        saltarLinea();
+    }
+
+    Imprimir("Fin de estrellas")
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>

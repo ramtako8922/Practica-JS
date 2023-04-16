@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Bienvenido a practicar JS</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      function CalcilarIMC(peso,altura){
+
+        var imc=peso/(altura*altura);
+
+        return imc
+        
+
+        
+
+      }
+     
+      //Varriables
+    var nombreInfprmado, pesoInformado, alturaInformada;
+    
+    //llamado a funciones
+    
+  
+    
+  
+    //Imprimir("El indice de masa corporal de Ricardo calculado es "+imc);
+
+    Imprimir("El promedio de Indice de Masa Corporal enre las 2 personas es "+(CalcilarIMC(62,1,68,"Ricardo")+CalcilarIMC(60,1.89,"Juliana"))/2);
+
+    Imprimir("El promedio de Indice de Masa Corporal entre juan y sara  es "+(CalcilarIMC(70,1,80,"Ricardo")+CalcilarIMC(76,1.76,"Juliana"))/2);
+    
+    nombreInfprmado=prompt("ingrese su nombre");
+    pesoInformado=prompt("inngrese su peso");
+    alturaInformada=prompt("inngrese su alutura");
+    resultadoIMC=CalcilarIMC(pesoInformado,alturaInformada);
+
+    Imprimir(nombreInfprmado+" Tu indice de masa corporal es "+resultadoIMC);
+
+    if(resultadoIMC<18.5){
+      Imprimir(nombreInfprmado+" Su peso es insuficiente");
+    }else if(resultadoIMC>=18.5 && resultadoIMC<=24.9){
+
+      Imprimir(nombreInfprmado+" Su peso es saludable");
+
+    }else if(resultadoIMC>=25 && resultadoIMC<=29.9){
+
+      Imprimir(nombreInfprmado+" Usted está en sobrepeso");
+
+    }else if(resultadoIMC>=30.0){
+      Imprimir(nombreInfprmado+" Usted tiene sobrepeso con grado de obesidad");
+
+    }
+
+    
+
+   
+</script> 
+</body>
+</html>

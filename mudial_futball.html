@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Programa que muestra el año donde hubo mundial</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      
+
+      
+     
+      //Varriables
+    var anioMundial=1930;
+    var anioLimite=parseInt(prompt("Ingrese el año hasta el que desea saber  si hubo mundial"));
+    
+    
+    //llamado a funciones
+   while(anioMundial<anioLimite )
+   {
+     
+    
+     Imprimir("Hubo mundial en el año "+anioMundial);
+     anioMundial=anioMundial+4;
+   }
+
+   Imprimir("No hubo mas mundiales segun el año estipulado")
+    
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>

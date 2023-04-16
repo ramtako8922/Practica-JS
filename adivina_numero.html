@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Juego de Adivinar número Aleatorio</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      function ObtenerNumeroAleatorio(n){
+        min=0;
+        max=Math.floor(n);
+
+        return Math.floor(Math.random()*(n-min+1)+min);
+      }
+
+      
+     
+      //Varriables
+    var intentos=3;
+    var contador=1;
+    var numeroSistema=ObtenerNumeroAleatorio(100);
+    
+    
+    //llamado a funciones
+    while(contador<=intentos){
+    var numeroIngresado=parseInt(prompt("Digite el número que cree usted está generando el sistema"))
+      
+    if(numeroIngresado==numeroSistema){
+      alert("Adivinaste el número que generó el sistema")
+      break;
+    }else{
+      alert("No acertaste, llevas "+contador+" intento");
+    }
+     contador++;
+  }
+
+  if(numeroIngresado==numeroSistema){
+    Imprimir("Adivinaste el número que generó el sistema")
+    
+  }else{
+    Imprimir("No acertaste el numero correcto era "+numeroSistema);
+  }
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>

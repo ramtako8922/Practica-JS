@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Juego de Adivinar número Aleatorio</h2>
+
+    <input >
+    <button>Verificar</button>
+    <p class="notificacion"></p>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      function ObtenerNumeroAleatorio(n){
+        min=0;
+        max=Math.floor(n);
+
+        return Math.floor(Math.random()*(n-min+1)+min);
+      }
+
+      
+    
+
+      function Verificar2(){
+       
+      if(contador<=intentos){
+       
+       if(parseInt( input.value)==numeroSistema){
+        alert("Usted acertón");
+      
+       
+      
+
+      }else{
+        alert("Usted erró");
+        input.value ="";
+        input.focus();
+       
+      }
+      contador++;
+      
+
+    
+    }
+
+if(parseInt(input.value)==numeroSistema){
+ nota.textContent="Adivinaste el número que generó el sistema";
+     
+    }
+    
+    nota.textConten="No acertaste el numero correcto era "+numeroSistema;
+    
+  }
+
+
+  
+      //Varriables
+    var input=document.querySelector("input"); 
+    var numeroSistema=ObtenerNumeroAleatorio(100);
+    var button=document.querySelector("button");
+    var nota=document.querySelector('.notificacion')
+    var contador=1;
+    var intentos=3;
+    
+    
+    //llamado a funciones
+  button.onclick=Verificar2;
+   
+    
+  
+</script> 
+</body>
+</html>

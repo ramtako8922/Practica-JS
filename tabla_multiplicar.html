@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Programa que muestra la tabla de multiplicar de un número dado</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+ 
+      
+     
+      //Varriables
+      var multiplicadorInicial=0;
+      var multiplicando=parseInt(prompt("Ingrese el numero del cual quiere calcular la tabla"));
+      var multiplicador=parseInt(prompt("Ingrese el valor límite hasta el cual quiere ver la tabla"));
+      var resultado;
+    
+    
+    //llamado a funciones
+    
+  /* 
+  Uso de cliclo While
+  while(multiplicadorInicial<=multiplicador )
+   {
+     
+     multiplicadorInicial=multiplicadorInicial+2-1;
+     resultado=multiplicadorInicial*multiplicando;
+     Imprimir(multiplicando+" x "+multiplicadorInicial+" = "+resultado);
+     
+     
+   }*/
+
+      //Uso de ciclo for
+
+   for(multiplicadorInicial=1; multiplicadorInicial<=multiplicador;multiplicadorInicial=multiplicadorInicial+2-1){
+
+      resultado=multiplicadorInicial*multiplicando;
+      Imprimir(multiplicando+" x "+multiplicadorInicial+" = "+resultado);
+
+   }
+
+   Imprimir("Fin de la tabla de multiplicar");
+    
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Programa que muestra el promedio de edad familiar</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+     
+      
+     
+      //Varriables
+    
+    var cantidadNumero=parseInt(prompt("Ingre el numero límie sobre el cual quiere contar los números pares"));
+    var numero;
+    var contador=1;
+    
+    
+    //llamado a funciones
+   while(contador<=cantidadNumero )
+   {
+       contador++;
+     if(contador%2==0){
+    
+        numero=contador;
+
+        Imprimir(numero+" es par");
+     
+   }
+  }
+   
+   Imprimir("Fin de la lista")
+    
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>

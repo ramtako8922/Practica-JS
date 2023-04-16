@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Program que permite saber si puede conducir o no</h2>
+   <script>
+
+    //funciones
+      function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<hr>");
+      }
+
+      function  Imprimir(texto){
+        document.write("<big>"+texto+"</big>");
+        saltarLinea();
+
+      }
+
+      
+
+      
+     
+      //Varriables
+    
+      var edad = parseInt(prompt("¿Cuál es tu edad?"));
+      var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+    
+    //llamado a funciones
+    if(edad<18 && tieneLicencia=="S" ){
+      Imprimir("No puedes conducir");
+    }else{
+      Imprimir("Puedes Conducir");
+    }
+    
+  
+
+    
+
+    
+
+    
+
+   
+</script> 
+</body>
+</html>
